@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.quiz-container {
+  @apply bg-white rounded-lg shadow-lg p-6 border-2 border-gray-200;
+}
+
+.timer {
+  @apply text-xl font-semibold text-red-600 mb-4;
+}
+
+.question {
+  @apply text-lg mb-6 text-gray-700;
+}
+
+.blank-button {
+  @apply mx-1 px-2 py-1 bg-gray-50 rounded text-sm font-medium border border-gray-200 text-gray-700 hover:bg-gray-100 cursor-pointer;
+}
+
+.blank-button:empty::before {
+  content: '_____';
+  @apply text-gray-400;
+}
+
+.options {
+  @apply grid grid-cols-2 gap-4 mb-6;
+}
+
+.word-button {
+  @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed border-2 border-blue-700;
+}
+
+.next-button {
+  @apply w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed border-2 border-green-700;
+}
+
+.feedback-screen {
+  @apply bg-white rounded-lg shadow-lg p-6 border-2 border-gray-200;
+}
+
+.answer-result {
+  @apply mb-4 p-4 border-2 border-gray-300 rounded bg-gray-50;
+}
+
+.answer-result p {
+  @apply mb-2 text-gray-700;
+}
