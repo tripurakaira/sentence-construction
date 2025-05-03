@@ -1,15 +1,9 @@
 export interface Question {
-  id: number;
-  sentence: string;
-  blanks: number;
+  id: string;
+  question: string;
   options: string[];
   correctAnswers: string[];
-}
-
-export interface UserAnswer {
-  questionId: number;
-  userAnswers: string[];
-  isCorrect: boolean;
+  blanks: number;
 }
 
 export interface QuizState {
@@ -17,4 +11,14 @@ export interface QuizState {
   userAnswers: UserAnswer[];
   timeRemaining: number;
   isQuizComplete: boolean;
-} 
+}
+
+export interface UserAnswer {
+  questionId: string;
+  userAnswers: string[];
+  isCorrect: boolean;
+}
+
+export interface TimerProps {
+  timeRemaining: number;
+}
